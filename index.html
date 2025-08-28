@@ -18,7 +18,7 @@
   .header{
     display:flex;
     flex-direction:column;
-    align-items:center;       /* center the whole block */
+    align-items:center;
     text-align:center;
     gap:.35rem;
     margin-bottom:1.25rem;
@@ -26,18 +26,18 @@
   .header .topline{
     display:flex;
     align-items:center;
-    justify-content:center;   /* keep logo + title centered as a row */
+    justify-content:center;
     gap:12px;
-    flex-wrap:nowrap;         /* keep on one line as much as possible */
+    flex-wrap:nowrap;
   }
   .logo{height:60px; width:auto;}
   .title{
     font-size:1.25rem;
     font-weight:700;
-    white-space:nowrap;       /* try to keep the title on one line */
+    white-space:nowrap;
   }
   .subtitle{
-    font-size:1.3rem;         /* bigger and bold as requested */
+    font-size:1.3rem;
     font-weight:800;
     margin-top:.15rem;
     color:#222;
@@ -56,7 +56,16 @@
   .controls button:active{background:var(--primary-dark)}
   .controls input[type="range"]{flex:1}
   .text{background:#fff; padding:.75rem; border:1px solid #eee; border-radius:8px}
-  select{font-size:1rem; padding:.3rem .45rem; border:1px solid #ddd; border-radius:8px; margin:0 .2rem}
+  select{
+    font-size:1rem;
+    padding:.3rem .45rem;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin:0 .2rem;
+    width:auto;             /* shrink to fit */
+    max-width:150px;        /* prevent oversized dropdown */
+    display:inline-block;   /* stay inline with text */
+  }
   details.translation {margin-top:.6rem; color:var(--muted)}
   details.translation summary{cursor:pointer; user-select:none}
   .foot{display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; justify-content:center; margin:1rem 0}
@@ -69,15 +78,14 @@
     body{padding:.75rem}
     .controls{flex-direction:column; align-items:stretch}
     .controls input[type="range"]{width:100%}
-    select{width:100%; margin:.25rem 0}
-    .title{white-space:normal;} /* allow wrap on narrow screens */
+    .title{white-space:normal;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- Centered header: logo + title on same line, big bold subtitle below -->
+  <!-- Centered header -->
   <header class="header">
     <div class="topline">
       <img src="LOGO.png" alt="Logo" class="logo" />
@@ -88,7 +96,7 @@
 
   <!-- SECTION 1 -->
   <div class="section" data-section="1">
-    <h3>Section 1: Transport choice</h3>
+    <h3>Section 1</h3>
     <div class="controls">
       <button class="playBtn">▶️ Play</button>
       <input type="range" class="progress" value="0" min="0" step="0.1" />
@@ -124,7 +132,7 @@
 
   <!-- SECTION 2 -->
   <div class="section" data-section="2">
-    <h3>Section 2: Daily travel routine</h3>
+    <h3>Section 2</h3>
     <div class="controls">
       <button class="playBtn">▶️ Play</button>
       <input type="range" class="progress" value="0" min="0" step="0.1" />
@@ -146,7 +154,7 @@
 
   <!-- SECTION 3 -->
   <div class="section" data-section="3">
-    <h3>Section 3: Positive aspects of this form of transport</h3>
+    <h3>Section 3</h3>
     <div class="controls">
       <button class="playBtn">▶️ Play</button>
       <input type="range" class="progress" value="0" min="0" step="0.1" />
@@ -187,7 +195,7 @@
 
   <!-- SECTION 4 -->
   <div class="section" data-section="4">
-    <h3>Section 4: Negative aspects of this form of transport</h3>
+    <h3>Section 4</h3>
     <div class="controls">
       <button class="playBtn">▶️ Play</button>
       <input type="range" class="progress" value="0" min="0" step="0.1" />
@@ -227,7 +235,7 @@
 
   <!-- SECTION 5 -->
   <div class="section" data-section="5">
-    <h3>Section 5: Overall view / conclusion</h3>
+    <h3>Section 5</h3>
     <div class="controls">
       <button class="playBtn">▶️ Play</button>
       <input type="range" class="progress" value="0" min="0" step="0.1" />
